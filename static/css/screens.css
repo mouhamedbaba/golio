@@ -22,19 +22,16 @@
         margin: 5px 0px;
     }
     .display{
-        font-size: 60px;
+        font-size: 45px;
         font-weight: 500;
-        line-height: 70px;
+        line-height: 50px;
         letter-spacing: -0.018em;
         text-align: left;
         width: 100%;
     }
 
     .col-8, .col-4 , .col-6, .col-9 , .col-3, .w-80, .w-60, .w-40{
-        width: 100%;
-    }
-    .w-60{
-        width: 100%;
+        width: 100% !important;
     }
     .container{
         margin: 0 10%;
@@ -56,6 +53,13 @@
     .menu{
         display: block;
     }
+    .rs{
+        display: inline;
+        justify-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
