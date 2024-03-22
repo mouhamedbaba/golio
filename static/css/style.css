@@ -242,7 +242,10 @@ button{
 
 }
 .gap-5{
-    gap: 5px;
+    gap: 5px !important;
+}
+.gap-10 {
+    gap: 10px !important;
 }
 .text-primary{
     color: var(--primary-color);
@@ -291,6 +294,10 @@ a{
 
 .bg-cta{
     background: #061C3D;
+}
+
+.text-white{
+    color: #FFFFFF;
 }
 
 /* End CTA */
