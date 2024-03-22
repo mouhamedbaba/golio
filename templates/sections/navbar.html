@@ -1,7 +1,7 @@
 <header >
 <nav class="container">
     <div class="logo-items-container">
-        <div class="logo">
+        <div class="logo w-100">
             <img  src="{{ url_for('static', filename='/images/ui/Logo.png') }}" alt="" srcset=""> 
         </div>
         <div class="nav-items">
@@ -15,9 +15,23 @@
                 </ul>
         </div>
     </div>
-    <div>
+    <div class="btns-navs">
         <button type="button" class="btn-secondary">Contact</button>
         <button type="button" class="btn-primary">Request A Quote</button>
+    </div>
+    <div class="d-flex gap-10">
+        <div class="icons-navs d-flex gap-5 fit">
+            <a type="button" class="btn-secondary btn-ico-nav">
+                <img src="{{ url_for('static', filename='/icons/contact.svg') }}" alt="" srcset="">
+            </a>
+            <a type="button" class="btn-primary btn-ico-nav">
+                <img src="{{ url_for('static', filename='/icons/quote.svg') }}" alt="" srcset="">
+            </a>
+        </div>
+        <a title="menu" role="button" class="cursor-pointer menu">
+            <img src="" alt="" srcset="{{ url_for('static', filename='/icons/menu.svg') }}">
+        </a>
+
     </div>
 </nav>
 </header>   

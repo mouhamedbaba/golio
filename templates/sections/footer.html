@@ -4,33 +4,36 @@
             <div class="row items-center">
                 <div class="col-3">
                     <div class="logo">
-                        <img  src="{{ url_for('static', filename='/images/ui/Logo.png') }}" alt="" srcset=""> 
+                        <img src="{{ url_for('static', filename='/images/ui/Logo.png') }}" alt="" srcset="">
                     </div>
                     <p class="w-60">
                         We build readymade websites, mobile
-applications, and elaborate online
-business services.
+                        applications, and elaborate online
+                        business services.
                     </p>
                 </div>
                 <div class="col-9">
                     <div class="row items-center w-100 gap-10">
                         <div class="w-100  ">
-                            <div class="row justify-between gap-10">
+                            <div class="row justify-between gap-10 ">
                                 {% for item in footer_links %}
-                                  <div class="col">
+                                <div class="col">
                                     <h5>{{ item.title }}</h5>
-                                    {% for link in item.list  %}
-                                     <p><a href="/" class="mt-10">{{ link }}</a></p> 
+                                    {% for link in item.list %}
+                                    <p><a href="/" class="mt-10">{{ link }}</a></p>
                                     {% endfor %}
-                                  </div>
+                                </div>
                                 {% endfor %}
                             </div>
                         </div>
                         <div class="d-flex flex-col justify-between gap-10">
                             <img src="{{ url_for('static', filename='/images/ui/fb.jpg') }}" alt="facebook" srcset="">
-                            <img src="{{ url_for('static', filename='/images/ui/linkedin.jpg') }}" alt="linkedin" srcset="">
-                            <img src="{{ url_for('static', filename='/images/ui/twitter.jpg') }}" alt="Twitter" srcset="">
-                            <img src="{{ url_for('static', filename='/images/ui/instagram.png') }}" alt="Instagram" srcset="">
+                            <img src="{{ url_for('static', filename='/images/ui/linkedin.jpg') }}" alt="linkedin"
+                                srcset="">
+                            <img src="{{ url_for('static', filename='/images/ui/twitter.jpg') }}" alt="Twitter"
+                                srcset="">
+                            <img src="{{ url_for('static', filename='/images/ui/instagram.png') }}" alt="Instagram"
+                                srcset="">
                         </div>
                     </div>
                 </div>
