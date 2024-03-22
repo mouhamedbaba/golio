@@ -1,22 +1,35 @@
 <section>
     <div class="container">
         <div class="hero row">
-        <div class="col-8">
-            <div class="hero-text">
-                <h1>
-                    The easiest way to create your website.
-                </h1> 
-                 <h6>Zakirsoft gives you everything you need to create your website in minutes. Bootstrap code with a well-organized Figma file to design & develop your next websites in minutes.</h6>
-                 <div>
-                    q q q q 
-                 </div>
-                 <div>
-                 <button class="btn-primary">Get Started</button>
-                 <button class="btn-secondary">View Preview</button>
-                 </div>
+            <div class="col-8">
+                <div class="hero-text">
+                    <div class="hero-title">
+                        The easiest way to create your website.
+                    </div>
+                    <div class="hero-desc">Zakirsoft gives you everything you need to create your website in minutes.
+                        Bootstrap code with a well-organized Figma file to design & develop your next websites in
+                        minutes.</div>
+                    <div class="hero-desc-row row">
+                        <div>
+                            <div class="hero-desc-row-text">It’s Simple, Easy to Use</div>
+                            <div class="hero-desc-row-text">Available with React & Nuxt.JS</div>
+                        </div>
+                        <div>
+                            <div class="hero-desc-row-text">Well-organized Figma File.</div>
+                            <div class="hero-desc-row-text">Lifetime Access</div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn-primary">Get Started</button>
+                        <button class="btn-secondary">View Preview</button>
+                    </div>
                 </div>
-        </div>
-            <img class="col-4"  height="100%" src="{{ url_for('static', filename='/images/hero_svg-rbg.png') }}" alt="" srcset="">
+            </div>
+            <div class="col-4">
+
+                <img class=" img-svg-hero" src="{{ url_for('static', filename='/images/img-hero.svg') }}" alt=""
+                    srcset="">
+            </div>
         </div>
     </div>
 </section>

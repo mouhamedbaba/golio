@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+        <div class="about">
+            <div class="row justify-between about-text">
+                <div class="row justify-between about-text">
+                    <img src="{{ url_for('static', filename='images/img-about.svg') }}" alt="" srcset="">
+                    <div class="about-title">Beautiful UI kit
+                        designed to grow
+                        your business.</div>
+                </div>
+                <div class="justify-end" style="width: 35%; color:var(--text-color);">Bootstrap code with a well-organized Figma file to design & develop your next websites in minutes.</div>
+            </div>
+            <div class="row justify-between card-container">
+                {% include "/items/cards.html" %}
+            </div>
+        </div>
+    </div>
+</section>

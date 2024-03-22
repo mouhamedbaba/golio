@@ -7,11 +7,10 @@
 
 body{
     margin: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Lexend", sans-serif;
 }
 .container{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0 15%;
 }
 
 .row{
@@ -21,18 +20,33 @@ body{
 
 
 .col-4{
-    width: 40%;
+    width: 45%;
     margin: 0;
     padding: 0;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .col-8{
-    width: 60%;
+    width: 55%;
     height: 100%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.justify-center{
+    display: flex;
+    justify-content: center !important;
+}
+.justify-between{
+    display: flex;
+    justify-content: space-between !important;
+}
+.justify-end{
+    display: flex;
+    justify-content: end !important;
+}
 /* Header */
 
 /* header{
@@ -76,6 +90,7 @@ button{
     border-radius: 8px;
     border: none;
     font-weight: bold;
+    cursor: pointer;
 }
 .btn-secondary{
     background-color: var(--secondary-color);
@@ -85,6 +100,10 @@ button{
     background-color: var(--primary-color);
     color: #F0F5FF;
 }
+
+.btn-white{
+    background-color: white;
+}
 .nav-link.active{
     color: var(--primary-color);
 }
@@ -93,6 +112,7 @@ button{
 }
 .logo-text{
     font-weight: 700px;
+    color:  #061C3D;
 }
 
 
@@ -101,9 +121,89 @@ button{
 
 /* Hero */
 
+.hero-text{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
 .hero{
     height: 80vh;
 }
+.hero-title{
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: -1.8%;
+    font-size: 68px;
 
-
+}
+.hero-desc{
+    font-weight: 250;
+    line-height: 24px;
+    size: 15px;
+}
+.img-svg-hero{
+    width: 100%;
+    height: 100%;
+}
+.hero-desc-row{
+    gap: 30px;
+}
+.hero-desc-row-text{
+    color: #0F9918;
+    margin-bottom: 10px;
+}
 /* End Hero */
+
+/* About */
+
+
+.about{
+    padding: 12px 0;
+}
+.about-title{
+    font-weight: bold;
+    font-size: 46px;
+    letter-spacing: -1.5%;
+    line-height: 50px;
+}
+.about-text{
+    align-items: center;
+    gap: 8px;
+}
+.card{
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+}
+
+.card-container{
+    gap: 10px;
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+.bg-secondary{
+    background-color: var(--secondary-color);
+}
+.bg-red{
+    background-color: #FEEDFA;
+}
+.bg-light{
+    background: #F5F6F7;
+
+}
+.text-primary{
+    color: var(--primary-color);
+}
+.text-secondary{
+    color: var(--secondary-color);
+}
+.text-purpule{
+    color: #7534FF;
+}
+p{
+    color: var(--text-color);
+}
+/* End About */

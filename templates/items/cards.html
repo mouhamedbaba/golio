@@ -1,0 +1,10 @@
+{% for item in cards %}
+<div class="card {{ item.bg }}">
+    <div class="card-img">
+        <img height="140px" width="140px" src="{{ item.img }}" alt="" srcset="">
+    </div>
+    <h3 style="font-weight: normal !important;">{{ item.title }}</h3>
+    <p style="font-weight: normal !important;">{{ item.description }}</p>
+    <button class="btn-white {{ item.btn_color }}">Learn More</button>
+</div>
+{% endfor %}
