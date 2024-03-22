@@ -1,0 +1,9 @@
+{% for item in selected_cards %}
+<div class="w-100 ">
+    <div class="card-img">
+        <img height="100%" width="100%" src="{{ item.img }}" alt="" srcset="">
+    </div>
+    <h5 style="font-weight: normal !important;">{{ item.title }}</h5>
+    <a href="/" class="text-primary">View Case Study</a>
+</div>
+{% endfor %}

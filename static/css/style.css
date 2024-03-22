@@ -5,35 +5,75 @@
     --text-color : #999fab;
 }
 
+.font-semibold{
+    font-weight: 500;
+}
+.p-0{
+    padding: 0px;
+}
+.h-100{
+    height: 100%;
+}
+
+.m-0{
+    margin: 0px ;
+}
+.mx-2{
+    margin: 10px 0px;
+}
+
 body{
     margin: 0;
     font-family: "Lexend", sans-serif;
 }
+h2{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    margin: 0px;
+
+}
 .container{
     margin: 0 15%;
+}
+.w-80{
+    width: 80%;
 }
 
 .row{
     display: flex;
     width: 100%;
 }
-
+.items-center{
+    align-items: center;
+}
+.border-left-primary{
+    border-left: 3px solid var(--primary-color);
+}
+.d-flex{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column !important;
+}
+.content-center{
+    justify-content: center;
+}
+.pl-5{
+    padding-left: 5%;
+}
 
 .col-4{
     width: 45%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .col-8{
     width: 55%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.col-6{
+    width: 50%;
 }
 .justify-center{
     display: flex;
@@ -47,11 +87,19 @@ body{
     display: flex;
     justify-content: end !important;
 }
+
+.py-5{
+    padding: 5% 0px;
+}
+.text-center{
+    text-align: center;
+}
+.w-100{
+    width: 100%;
+}
 /* Header */
 
-/* header{
-    background-color: red;
-} */
+
 
 nav{
     display: flex;
@@ -127,20 +175,14 @@ button{
 
 /* Hero */
 
-.hero-text{
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-}
 
-.hero{
-    height: 80vh;
-}
-.hero-title{
-    font-weight: 500;
-    line-height: 70px;
-    letter-spacing: -1.8%;
-    font-size: 68px;
+.display{
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: -0.018em;
+    text-align: left;
+    
 
 }
 .hero-desc{
@@ -150,7 +192,6 @@ button{
 }
 .img-svg-hero{
     width: 100%;
-    height: 100%;
 }
 .hero-desc-row{
     gap: 30px;
@@ -200,6 +241,9 @@ button{
     background: #F5F6F7;
 
 }
+.gap-5{
+    gap: 5px;
+}
 .text-primary{
     color: var(--primary-color);
 }
@@ -212,4 +256,41 @@ button{
 p{
     color: var(--text-color);
 }
+a{
+    text-decoration: none;
+}
+.mt-5{
+    margin-top: 5%;
+}
+.w-60{
+    width: 60% !important;
+}
 /* End About */
+
+
+/* testi */
+.card-img-testi{
+
+}
+
+.bg-green{
+    background: #CFEBD1;
+}
+.bg-rose{
+    background: #E3D6FF;
+}
+.bg-yellow{
+    background: #FFE9BD;
+}
+.bg-blue{
+    background: #CEE0FA;
+}
+/* End test */
+
+/* CTA */
+
+.bg-cta{
+    background: #061C3D;
+}
+
+/* End CTA */
