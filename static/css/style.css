@@ -69,6 +69,13 @@ h2{
     width: 45%;
 }
 
+.col-3{
+    width: 40%;
+}
+.col-9{
+    width: 60%;
+}
+
 .col-8{
     width: 55%;
 }
@@ -76,15 +83,12 @@ h2{
     width: 50%;
 }
 .justify-center{
-    display: flex;
     justify-content: center !important;
 }
 .justify-between{
-    display: flex;
     justify-content: space-between !important;
 }
 .justify-end{
-    display: flex;
     justify-content: end !important;
 }
 
@@ -261,9 +265,13 @@ p{
 }
 a{
     text-decoration: none;
+    color: var(--text-color);
 }
 .mt-5{
     margin-top: 5%;
+}
+.mt-10{
+    margin-top: 10%;
 }
 .w-60{
     width: 60% !important;

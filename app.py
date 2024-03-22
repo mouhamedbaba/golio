@@ -95,4 +95,38 @@ def index():
             "img" : url_for('static', filename='images/ui/Logom.png')
         }
     ]
-    return render_template("index.html", cards=CARDS, selected_cards=SELECTED_CARDS, testi_cards=TESTI_CARDS, trusted_by=TRUSTED_BY)
+    
+    FOOTER_LINKS = [
+        {
+            "title" : "Quick Links",
+            "list" : [
+                "Portfolio",
+                "About",
+                "Services",
+                "Pracing Plan",
+                "Contact"
+            ]
+        },
+        {
+            "title" : "Services",
+            "list" : {
+            "UI/UX Design",
+            "Branding",
+            "Illustration",
+            "Design Concept",
+            "App Design"
+            }
+        },
+        {
+            "title" : "Product",
+            "list" : [
+                "Figma",
+                "Adobe",
+                "Dribbble",
+                "Behance",
+                "Themeforest"
+            ]
+        }
+    ]
+    
+    return render_template("index.html", cards=CARDS, selected_cards=SELECTED_CARDS, testi_cards=TESTI_CARDS, trusted_by=TRUSTED_BY, footer_links=FOOTER_LINKS)
