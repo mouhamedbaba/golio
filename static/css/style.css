@@ -59,6 +59,12 @@ nav{
     padding: 15px 0px 15px 0px;
     align-items: center;
 }
+.logo{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
 .logo-items-container{
     display: flex;
     gap: 10px;
