@@ -7,11 +7,11 @@ load_dotenv()
 
 private = {
     "type": "service_account",
-    "project_id": "mystats-9a1b4",
-    "private_key_id": "b792b92ca11cf3acd4e0c67756dd3997ffa51eba",
+    "project_id": os.getenv('PROJECT_ID'),
+    "private_key_id": os.getenv("PRIVATE_KEY_ID"),
     "private_key": os.getenv("FIREBASE_SECURE_KEY"),
-    "client_email": "firebase-adminsdk-570kp@mystats-9a1b4.iam.gserviceaccount.com",
-    "client_id": "100274967463510339747",
+    "client_email": os.getenv("CLIENT_EMAIL"),
+    "client_id": os.getenv("CLIENT_ID"),
     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
     "token_uri": "https://oauth2.googleapis.com/token",
     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
