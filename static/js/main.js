@@ -1,4 +1,8 @@
 let register = new Register("Golio")
 register.resgister_site()
-register.register_guest()
-register.register_page()
+setTimeout(() => {
+    register.register_guest()
+}, 5000);
+setTimeout(() => {
+    register.register_page()
+}, 10000)
