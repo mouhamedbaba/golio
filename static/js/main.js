@@ -1,4 +1,4 @@
-let register = new Register("Golio")
+let register = new Register("Text2")
 register.resgister_site()
 setTimeout(() => {
     register.register_guest()
