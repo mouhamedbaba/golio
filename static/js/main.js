@@ -1,7 +1,21 @@
 const resgister_site = () =>{
-    fetch('/register_site', {
-        method: 'GET',
-        
+    let Name = "Golio"
+    // let Url = window.location.href
+    let page_title = document.title
+    let data = {
+        Name,
+        Url,
+        Autre : {
+            page_title, 
+            description : "Golio est un site de développement web",
+        }
+    }
+    fetch('http://127.0.0.1:5000/register_site', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     })
     .then(
         response => console.log(response)
@@ -44,6 +58,6 @@ const register_user = () => {
 }
 
 
-resgister_site()
-register_user()
+// resgister_site()
+// register_user()
 

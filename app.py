@@ -2,7 +2,6 @@ import json
 import uuid
 from flask import Flask, Response, jsonify, render_template, url_for, make_response
 from flask import request
-from config.firebase import firebase_config as fbs
 app = Flask(__name__)
 import datetime
 
@@ -137,107 +136,6 @@ def index():
     ]
     
     return render_template("index.html", cards=CARDS, selected_cards=SELECTED_CARDS, testi_cards=TESTI_CARDS, trusted_by=TRUSTED_BY, footer_links=FOOTER_LINKS)
-
-@app.route("/register_site")
-def register_site() :
-    sites_ref = fbs.db.collection("Sites").document("Golio")
-    site = sites_ref.get()
-    data = {"message" : "exist_deja"}
-    res = make_response(data)
-    if site.exists:
-        return res
-    else :
-        data = {
-                "SiteId" : "Golio",
-                "Name" : "Golio",
-                "Url" : "golio.vercel.app",
-                "Date_creation" :  datetime.datetime.today(),
-                "Autre" : {}
-            }
-        sites_ref.set(data)
-        res = make_response(data)
-        return res
-@app.route("/register_user")
-async def register_user() :
-    cookie = request.cookies.get("visiteur_id")
-    path = request.args.get("path", "/register_user")
-    url = request.args.get("url", "golio.vercel.app")
-    page_title = request.args.get("page_title", "Acceuil")
-    
-    if  cookie == None:
-        visiteur_ref = fbs.db.collection("Visiteurs").document()
-        visiteur = {
-            "SiteId" : "Golio",
-            "Date_Visite" : datetime.datetime.today(),
-            "heure_Visite" : datetime.datetime.now(),
-            "Adress_ip" : request.remote_addr,
-            "navigateur" : request.user_agent.browser,
-            "système_exploitation" : request.user_agent.platform
-        }
-        visiteur_ref.set(visiteur)
-        
-        page_vistee = {
-            "path" : path,
-            "VisiteurId" : visiteur_ref.id,
-            "SiteId" : "Golio",
-            "url" : url,
-            "page_title" : page_title,
-            "date_visite" : datetime.datetime.today(),
-            "Nombre_vistie" : 1            
-        }
-        page_ref =  fbs.db.collection("Pages_visitees").document()
-        page_ref.set(page_vistee)
-
-        res = {
-            "message" : "page set and user set",
-            "page_id" : page_ref.id
-        }
-        response = make_response(res)
-        response.set_cookie("visiteur_id", visiteur_ref.id)
-        
-        print("firstly added ")
-        return response
-    else :
-        list_page = request.args.get("list_page_id")
-        print("list_page" , list_page.split(','))
-        page_exist = False
-        for page_id in list_page.split(',') :
-            if page_id == "" :
-                continue
-            print("Page_id : ", page_id)
-            page_vistee_ref =  fbs.db.collection("Pages_visitees").document(page_id)
-            page_vistee = page_vistee_ref.get()
-            if page_vistee.exists :
-                pages_dict = page_vistee.to_dict()
-                nbv =  pages_dict["Nombre_vistie"]
-                print("path_by_js", path)
-                print("path_by_fbase", pages_dict["path"])
-                if path == pages_dict["path"] :
-                    page_exist = True
-                    page_vistee_ref.update({"Nombre_vistie" : nbv + 1})
-                    print("updated")
-                    p_id = None
-                    break
-        if page_exist == False :
-            print("le path n'est pas enrigitrees")
-            page_vistee = {
-            "path" : path,
-            "VisiteurId" : cookie,
-            "SiteId" : "Golio",
-            "url" : url,
-            "page_title" : page_title,
-            "date_visite" : datetime.datetime.today(),
-            "Nombre_vistie" : 1       
-        }
-            page_ref =  fbs.db.collection("Pages_visitees").document()
-            page_ref.set(page_vistee)
-            p_id = page_ref.id
-        res = {
-            "message" : "page set and user set",
-            "page_id" : p_id
-            }
-        response = make_response(res)
-        return response
 
 
 @app.route("/page_2")
